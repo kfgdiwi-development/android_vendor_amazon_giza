@@ -29,4 +29,15 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 include $(BUILD_PREBUILT)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := libcam2halsensor
+LOCAL_MODULE_OWNER := amazon
+LOCAL_SRC_FILES_64 := proprietary/lib64/libcam2halsensor.so
+LOCAL_SRC_FILES_32 := proprietary/lib/libcam2halsensor.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
 endif
